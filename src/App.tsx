@@ -1,7 +1,8 @@
+import AppRoutes from "./router";
 function App() {
   return (
     <>
-      <h1>welcome</h1>
+      <AppRoutes />
     </>
   );
 }
