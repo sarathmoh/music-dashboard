@@ -7,7 +7,6 @@ const PublicRoutes = [
     path: "login",
     name: "login",
     element: <Login />,
-    isIndex: true,
   },
 ];
 

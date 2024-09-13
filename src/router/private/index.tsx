@@ -13,7 +13,6 @@ const PrivateRoutes = [
     path: "courses",
     name: "courses",
     element: <Courses />,
-    isIndex: true,
   },
 ];
 
