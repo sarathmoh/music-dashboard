@@ -1,0 +1,190 @@
+{
+  "overView": {
+    "totalStudents": 200,
+    "totalCourses": 25,
+    "totalAmount": 500000,
+    "bestCourse": "Guitar",
+    "worstCourse": "Percussion"
+  },
+  "enrollments": [
+    {
+      "enrollmentNumber": "ENR1001",
+      "studentName": "Alice Johnson",
+      "courseName": "Piano",
+      "fees": 1500,
+      "enrollmentDate": "2024-01-15"
+    },
+    {
+      "enrollmentNumber": "ENR1002",
+      "studentName": "John Smith",
+      "courseName": "Flute",
+      "fees": 1000,
+      "enrollmentDate": "2024-02-20"
+    },
+    {
+      "enrollmentNumber": "ENR1003",
+      "studentName": "Emma Brown",
+      "courseName": "Guitar",
+      "fees": 1800,
+      "enrollmentDate": "2024-03-12"
+    },
+    {
+      "enrollmentNumber": "ENR1004",
+      "studentName": "Michael Lee",
+      "courseName": "Drums",
+      "fees": 1300,
+      "enrollmentDate": "2024-04-01"
+    },
+    {
+      "enrollmentNumber": "ENR1005",
+      "studentName": "Sophia Davis",
+      "courseName": "Violin",
+      "fees": 1700,
+      "enrollmentDate": "2024-05-05"
+    }
+  ],
+  "bestStudents": [
+    {
+      "registerNumber": "REG2006",
+      "firstName": "Charlotte",
+      "lastName": "Green",
+      "course": "Flute",
+      "totalFees": 1000,
+      "registrationDate": "2024-08-01"
+    },
+    {
+      "registerNumber": "REG2007",
+      "firstName": "Daniel",
+      "lastName": "Walker",
+      "course": "Percussion",
+      "totalFees": 2500,
+      "registrationDate": "2024-08-10"
+    },
+    {
+      "registerNumber": "REG2008",
+      "firstName": "Grace",
+      "lastName": "Young",
+      "course": "Piano",
+      "totalFees": 1500,
+      "registrationDate": "2024-09-01"
+    },
+    {
+      "registerNumber": "REG2009",
+      "firstName": "Jack",
+      "lastName": "Hall",
+      "course": "Bass Guitar",
+      "totalFees": 2200,
+      "registrationDate": "2024-09-05"
+    },
+    {
+      "registerNumber": "REG2010",
+      "firstName": "Amelia",
+      "lastName": "Scott",
+      "course": "Drums",
+      "totalFees": 1300,
+      "registrationDate": "2024-09-10"
+    }
+  ],
+  "courses": [
+    {
+      "name": "Introduction to Guitar",
+      "description": "A beginner's guide to learning guitar.",
+      "instructor": "Mr. James Harrison",
+      "instrument": "Guitar",
+      "dayOfWeek": "Monday",
+      "numberOfStudents": 50,
+      "price": 1200,
+      "status": "active"
+    },
+    {
+      "name": "Advanced Piano Techniques",
+      "description": "An in-depth course on advanced piano playing.",
+      "instructor": "Ms. Clara Lee",
+      "instrument": "Piano",
+      "dayOfWeek": "Wednesday",
+      "numberOfStudents": 40,
+      "price": 1800,
+      "status": "closed"
+    },
+    {
+      "name": "Percussion Fundamentals",
+      "description": "Learn the basics of percussion instruments.",
+      "instructor": "Mr. Alan Brown",
+      "instrument": "Percussion",
+      "dayOfWeek": "Friday",
+      "numberOfStudents": 30,
+      "price": 2500,
+      "status": "archived"
+    },
+    {
+      "name": "Introduction to Flute",
+      "description": "A comprehensive overview of flute playing.",
+      "instructor": "Ms. Sarah Thompson",
+      "instrument": "Flute",
+      "dayOfWeek": "Tuesday",
+      "numberOfStudents": 35,
+      "price": 1700,
+      "status": "active"
+    },
+    {
+      "name": "Bass Guitar Techniques",
+      "description": "A detailed study of bass guitar playing.",
+      "instructor": "Mr. Mark Evans",
+      "instrument": "Bass Guitar",
+      "dayOfWeek": "Thursday",
+      "numberOfStudents": 45,
+      "price": 2200,
+      "status": "closed"
+    },
+    {
+      "name": "Violin for Beginners",
+      "description": "Learn the basics of violin playing.",
+      "instructor": "Ms. Kate Lewis",
+      "instrument": "Violin",
+      "dayOfWeek": "Monday",
+      "numberOfStudents": 60,
+      "price": 1700,
+      "status": "active"
+    },
+    {
+      "name": "Drums 101",
+      "description": "A comprehensive course on basic drumming.",
+      "instructor": "Mr. Eric Wilson",
+      "instrument": "Drums",
+      "dayOfWeek": "Wednesday",
+      "numberOfStudents": 55,
+      "price": 2100,
+      "status": "archived"
+    },
+    {
+      "name": "Flute for Beginners",
+      "description": "A beginner-friendly course on flute basics.",
+      "instructor": "Ms. Emily White",
+      "instrument": "Flute",
+      "dayOfWeek": "Friday",
+      "numberOfStudents": 50,
+      "price": 1000,
+      "status": "active"
+    },
+    {
+      "name": "Advanced Guitar Techniques",
+      "description": "Learn advanced techniques in guitar playing.",
+      "instructor": "Mr. John Davis",
+      "instrument": "Guitar",
+      "dayOfWeek": "Tuesday",
+      "numberOfStudents": 40,
+      "price": 1300,
+      "status": "closed"
+    },
+    {
+      "name": "Music Theory Essentials",
+      "description": "A foundational course on music theory.",
+      "instructor": "Ms. Julia Green",
+      "instrument": "None",
+      "dayOfWeek": "Thursday",
+      "numberOfStudents": 30,
+      "price": 1600,
+      "status": "active"
+    }
+  ]
+}

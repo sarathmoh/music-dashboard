@@ -4,7 +4,7 @@ const Home = lazy(() => import("@/pages/dashboard/home"));
 const Courses = lazy(() => import("@/pages/dashboard/courses"));
 const PrivateRoutes = [
   {
-    path: "",
+    path: "home",
     name: "home",
     element: <Home />,
     isIndex: true,
