@@ -51,7 +51,7 @@ export default function Login() {
         title: response.message,
       });
       localStorage.setItem("isAuthenticated", "true");
-      navigate("/dashboard");
+      navigate("/dashboard/home");
     }
   };
 
