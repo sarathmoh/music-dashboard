@@ -8,6 +8,7 @@
   },
   "enrollments": [
     {
+      "id": "Enr1o3DyVlkL",
       "enrollmentNumber": "ENR1001",
       "studentName": "Alice Johnson",
       "courseName": "Piano",
@@ -15,6 +16,7 @@
       "enrollmentDate": "2024-01-15"
     },
     {
+      "id": "Enr2j9UwHsmN",
       "enrollmentNumber": "ENR1002",
       "studentName": "John Smith",
       "courseName": "Flute",
@@ -22,6 +24,7 @@
       "enrollmentDate": "2024-02-20"
     },
     {
+      "id": "Enr3y5DwKoPS",
       "enrollmentNumber": "ENR1003",
       "studentName": "Emma Brown",
       "courseName": "Guitar",
@@ -29,6 +32,7 @@
       "enrollmentDate": "2024-03-12"
     },
     {
+      "id": "Enr4i8XwRtQG",
       "enrollmentNumber": "ENR1004",
       "studentName": "Michael Lee",
       "courseName": "Drums",
@@ -36,6 +40,7 @@
       "enrollmentDate": "2024-04-01"
     },
     {
+      "id": "Enr5u7LxJzFV",
       "enrollmentNumber": "ENR1005",
       "studentName": "Sophia Davis",
       "courseName": "Violin",
@@ -45,6 +50,7 @@
   ],
   "bestStudents": [
     {
+      "id": "Reg1o3PbQjkL",
       "registerNumber": "REG2006",
       "firstName": "Charlotte",
       "lastName": "Green",
@@ -53,6 +59,7 @@
       "registrationDate": "2024-08-01"
     },
     {
+      "id": "Reg2y7GsVlkT",
       "registerNumber": "REG2007",
       "firstName": "Daniel",
       "lastName": "Walker",
@@ -61,6 +68,7 @@
       "registrationDate": "2024-08-10"
     },
     {
+      "id": "Reg3u6NpMlwR",
       "registerNumber": "REG2008",
       "firstName": "Grace",
       "lastName": "Young",
@@ -69,6 +77,7 @@
       "registrationDate": "2024-09-01"
     },
     {
+      "id": "Reg4e9TwCjxN",
       "registerNumber": "REG2009",
       "firstName": "Jack",
       "lastName": "Hall",
@@ -77,6 +86,7 @@
       "registrationDate": "2024-09-05"
     },
     {
+      "id": "Reg5q5VrLmxK",
       "registerNumber": "REG2010",
       "firstName": "Amelia",
       "lastName": "Scott",
@@ -87,6 +97,7 @@
   ],
   "courses": [
     {
+      "id": "Crse1i8LpNjF",
       "name": "Introduction to Guitar",
       "description": "A beginner's guide to learning guitar.",
       "instructor": "Mr. James Harrison",
@@ -97,6 +108,7 @@
       "status": "active"
     },
     {
+      "id": "Crse2w7BjHtN",
       "name": "Advanced Piano Techniques",
       "description": "An in-depth course on advanced piano playing.",
       "instructor": "Ms. Clara Lee",
@@ -107,6 +119,7 @@
       "status": "closed"
     },
     {
+      "id": "Crse3k9QpHux",
       "name": "Percussion Fundamentals",
       "description": "Learn the basics of percussion instruments.",
       "instructor": "Mr. Alan Brown",
@@ -117,6 +130,7 @@
       "status": "archived"
     },
     {
+      "id": "Crse4l6NvDoj",
       "name": "Introduction to Flute",
       "description": "A comprehensive overview of flute playing.",
       "instructor": "Ms. Sarah Thompson",
@@ -127,6 +141,7 @@
       "status": "active"
     },
     {
+      "id": "Crse5b3PwFhs",
       "name": "Bass Guitar Techniques",
       "description": "A detailed study of bass guitar playing.",
       "instructor": "Mr. Mark Evans",
@@ -137,6 +152,7 @@
       "status": "closed"
     },
     {
+      "id": "Crse6o9LzFbv",
       "name": "Violin for Beginners",
       "description": "Learn the basics of violin playing.",
       "instructor": "Ms. Kate Lewis",
@@ -147,6 +163,7 @@
       "status": "active"
     },
     {
+      "id": "Crse7p4FxJdu",
       "name": "Drums 101",
       "description": "A comprehensive course on basic drumming.",
       "instructor": "Mr. Eric Wilson",
@@ -157,6 +174,7 @@
       "status": "archived"
     },
     {
+      "id": "Crse8x6HvQkp",
       "name": "Flute for Beginners",
       "description": "A beginner-friendly course on flute basics.",
       "instructor": "Ms. Emily White",
@@ -167,6 +185,7 @@
       "status": "active"
     },
     {
+      "id": "Crse9s2GnKmw",
       "name": "Advanced Guitar Techniques",
       "description": "Learn advanced techniques in guitar playing.",
       "instructor": "Mr. John Davis",
@@ -177,10 +196,11 @@
       "status": "closed"
     },
     {
+      "id": "Crse0e5TxLwv",
       "name": "Music Theory Essentials",
       "description": "A foundational course on music theory.",
       "instructor": "Ms. Julia Green",
-      "instrument": "None",
+      "instrument": "Flute",
       "dayOfWeek": "Thursday",
       "numberOfStudents": 30,
       "price": 1600,
