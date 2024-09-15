@@ -1,6 +1,6 @@
 import StatCard from "@/components/dashboard/home/StatCard";
 import { Card, CardContent } from "@/components/ui/card";
-import data from "../../../data/mock.json";
+import axios from "axios";
 import {
   Table,
   TableHead,
@@ -13,19 +13,39 @@ import Avathar from "../../../assets/icons/Stat.png";
 import { useEffect, useState } from "react";
 
 const Home = () => {
-  const [tableData, setTableData] = useState({});
+  const [tableData, setTableData] = useState(null);
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get("/mock.json");
+      localStorage.setItem("tableData", JSON.stringify(response?.data));
+      setTableData(response?.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   useEffect(() => {
     const storedData = localStorage.getItem("tableData");
-
-    if (storedData) {
-      setTableData(JSON.parse(storedData));
+    if (!storedData) {
+      fetchData();
     } else {
-      localStorage.setItem("tableData", JSON.stringify(data));
-      setTableData(data);
+      setTableData(JSON.parse(storedData));
     }
   }, []);
-  if (!tableData) return <div>Loading...</div>;
+
+  const totalStudents = tableData?.courses || [];
+  const finalCount = totalStudents?.reduce((sum, item) => {
+    return sum + (item?.numberOfStudents || 0);
+  }, 0);
+
+  const totalCourses = tableData?.courses?.length;
+
+  const totalPrice = totalStudents?.reduce((price, item) => {
+    return price + item?.numberOfStudents * item?.price;
+  }, 0);
+
+  if (tableData === null) return <div>Loading...</div>;
 
   return (
     <main className="flex-1 p-8">
@@ -33,6 +53,8 @@ const Home = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
         <StatCard
+          finalCount={finalCount}
+          isPrice={false}
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-blue-500" />
           }
@@ -40,6 +62,8 @@ const Home = () => {
           subtitle="total number of students"
         />
         <StatCard
+          finalCount={totalCourses}
+          isPrice={false}
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-green-500" />
           }
@@ -47,6 +71,8 @@ const Home = () => {
           subtitle="total number of courses"
         />
         <StatCard
+          finalCount={totalPrice}
+          isPrice={true}
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-yellow-500" />
           }
@@ -57,14 +83,14 @@ const Home = () => {
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-purple-500" />
           }
-          title="Guitar"
+          finalCount="Guitar"
           subtitle="best performing course"
         />
         <StatCard
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-red-500" />
           }
-          title="Flute"
+          finalCount="Flute"
           subtitle="worst performing course"
         />
       </div>
