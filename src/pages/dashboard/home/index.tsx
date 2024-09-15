@@ -58,7 +58,6 @@ const Home = () => {
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-blue-500" />
           }
-          title="164"
           subtitle="total number of students"
         />
         <StatCard
@@ -67,7 +66,6 @@ const Home = () => {
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-green-500" />
           }
-          title="12"
           subtitle="total number of courses"
         />
         <StatCard
@@ -76,10 +74,10 @@ const Home = () => {
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-yellow-500" />
           }
-          title="$2000"
           subtitle="total amount earned"
         />
         <StatCard
+          isPrice={false}
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-purple-500" />
           }
@@ -87,6 +85,7 @@ const Home = () => {
           subtitle="best performing course"
         />
         <StatCard
+          isPrice={false}
           icon={
             <img src={Avathar} className="w-[32px] h-[32px] text-red-500" />
           }
