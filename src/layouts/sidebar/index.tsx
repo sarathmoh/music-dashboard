@@ -1,9 +1,17 @@
 import Brand from "../../assets/icons/Brand.png";
 import Logout from "../../assets/icons/Logout.png";
 import { LayoutDashboard, ListMusic } from "lucide-react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/authContext";
 
 const SideBar = () => {
+  const { setIsAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const logoutHandler = () => {
+    localStorage.removeItem("isAuthenticated");
+    setIsAuthenticated(false);
+    navigate("/login");
+  };
   return (
     <div className="h-full flex flex-col ">
       <div className="p-4 flex-1 flex flex-col items-center ">
@@ -57,14 +65,11 @@ const SideBar = () => {
           </NavLink>
         </nav>
       </div>
-      <div className="p-4">
-        <a
-          href="#"
-          className="flex flex-col items-center space-x-2 p-2 text-gray-600 hover:bg-gray-100 rounded-md"
-        >
+      <div className="p-4" onClick={logoutHandler}>
+        <div className="flex flex-col items-center space-x-2 p-2 text-gray-600 hover:bg-gray-100 rounded-md">
           <img src={Logout} className="w-[24p] h-[24p]" />
           <span>Logout</span>
-        </a>
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,7 @@ import { EyeIcon, EyeOffIcon } from "lucide-react";
 import { authentication } from "@/utils/auth";
 import { useToast } from "@/hooks/use-toast";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "@/context/authContext";
 
 const schema = yup
   .object({
@@ -28,6 +29,7 @@ type FormData = yup.InferType<typeof schema>;
 export default function Login() {
   const { toast } = useToast();
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const {
     register,
@@ -51,7 +53,9 @@ export default function Login() {
         title: response.message,
       });
       localStorage.setItem("isAuthenticated", "true");
+      setIsAuthenticated(true);
       navigate("/dashboard/home");
+      
     }
   };
 

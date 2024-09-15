@@ -4,6 +4,7 @@ import Layout from "@/layouts";
 import Loader from "@/components/loader";
 import PageNotFound from "@/components/pagenotfound";
 import { Suspense } from "react";
+import { useAuth } from "@/context/authContext";
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,11 +12,8 @@ import {
   Navigate,
 } from "react-router-dom";
 import Login from "@/pages/auth/login";
-import { useState } from "react";
 const AppRoutes = () => {
-  const [isAuthentic, setIsAuthentic] = useState(
-    localStorage.getItem("isAuthenticated") === "true"
-  );
+  const { isAuthenticated } = useAuth();
 
   return (
     <Suspense fallback={<Loader />}>
@@ -23,10 +21,12 @@ const AppRoutes = () => {
         <Routes>
           <Route
             path="/"
-            element={!isAuthentic ? <Login /> : <Navigate to={"/dashboard"} />}
+            element={
+              !isAuthenticated ? <Login /> : <Navigate to={"/dashboard"} />
+            }
           />
 
-          {isAuthentic && (
+          {isAuthenticated && (
             <Route path="/dashboard" element={<Layout />}>
               {PrivateRoutes.map((route) => {
                 return (
@@ -40,7 +40,7 @@ const AppRoutes = () => {
               })}
             </Route>
           )}
-          {!isAuthentic &&
+          {!isAuthenticated &&
             PublicRoutes.map((route) => {
               return (
                 <Route
